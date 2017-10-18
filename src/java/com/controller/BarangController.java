@@ -51,6 +51,25 @@ public class BarangController {
         List<Product> list = (List<Product>) session.getAttribute("keranjang");
         list.add((Product) session.getAttribute("prod"));
         session.removeAttribute("prod");
-        return "berhasi";
+        return "keranjang";
+    }
+    
+    @RequestMapping(value = "isiKeranjang")
+    public String isiKeranjang(){
+        return "cart";
+    }
+    
+    @RequestMapping(value ="hapus/{id}")
+    public String isiKeranjang(HttpSession session, @PathVariable("id") Integer id){
+        List<Product> list=(List<Product>) session.getAttribute("keranjang");
+        List<Product> keranjangBaru = new ArrayList<>();
+        int penampung=0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getId()==id) {
+                penampung=i;
+            }
+        }
+        list.remove(penampung);
+        return "cart";
     }
 }

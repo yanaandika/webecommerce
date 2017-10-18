@@ -16,17 +16,17 @@
     <body class="container">
         <h1 align="center">Product Kami</h1>
         <table class="table table-hover">
-            <thead class="thead-inverse">
             <h1>${user.username}</h1>
-            <p align="right"><a href="tambahkan">Barang</a> : ${keranjang.size()}</p>
+            <p align="right"><a href="isiKeranjang">Barang</a> : ${keranjang.size()}</p>
             <tr>
-                <th>Nama</th> <th>Harga</th>
+                <th>Nama</th><th>Harga</th><th></th>
             </tr>
             </thead>
             <c:forEach var="p" items="${prod}">
                 <tr>    
-                    <td><a href="${p.id}">${p.name}</a></td>
+                    <td>${p.name}</td>
                     <td>${p.harga}</td>
+                    <td><a href="${p.id}"><button class="btn-warning">Beli</button></a></td>
                 </tr>
             </c:forEach>
         </table>

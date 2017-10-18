@@ -13,12 +13,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
         <title>JSP Page</title>
     </head>
-    <body>
-        <h1>List Barang : ${user.products.size()}</h1>
+    <body class="container">
+        <h1 align="center"> Detail Barang </h1>
         <table class="table table-hover">
+            <thead class="thead-inverse">
             <tr>
                 <th>Nama</th><th>Harga</th>
             </tr>
+            </thead>
             <c:forEach var="p" items="${user.products}">
                 <tr>    
                     <td>${p.name}</td>
@@ -26,7 +28,7 @@
                 </tr>
             </c:forEach>
         </table>
-        <a href="tambahkan"><button class="btn">Tambahkan Barang Belanjaan</button></a>   
+        <a href="tambahkan"><button class="btn btn-info">Tambahkan Barang Belanjaan</button></a>   
         
     </body>
 </html>
