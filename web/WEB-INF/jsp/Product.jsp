@@ -26,7 +26,7 @@
                 <tr>    
                     <td>${p.name}</td>
                     <td>${p.harga}</td>
-                    <td><a href="${p.id}"><button class="btn-warning">Beli</button></a></td>
+                    <td><a href="${p.id}"><button class="btn-warning">Buy</button></a></td>
                 </tr>
             </c:forEach>
         </table>

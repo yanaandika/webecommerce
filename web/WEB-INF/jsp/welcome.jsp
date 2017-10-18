@@ -19,8 +19,7 @@
         <h1 align="center">Anda Puas, Harga Puas </h1> 
         <p align="right">${user.username}</p></br>
         <p align="right"><a href="isiKeranjang"isiKeranjang">List Barang</a> ${keranjang.size()}</p></br>
-        <p><a href="Product/all">Lihat Semua Product</a></p>
-              
+        <p><a href="Product/all">Lihat Semua Product</a></p>             
         </table>
     </body>
 </html>

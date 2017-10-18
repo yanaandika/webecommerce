@@ -16,17 +16,15 @@
     <body class="container">
         <h1 align="center">Isi Keranjang Anda</h1>
         <table class="table table-hover">
-            <table class="table table-hover">
-            <tr>
-                <th>Nama</th><th>Harga</th><th></th>
-            </tr>
-            </table>
+                <tr>
+                    <th>Nama</th><th>Harga</th><th></th>
+                </tr>
             <c:forEach items="${keranjang}" var="c">
                 <tr>
                     <td>${c.name}</td>
                     <td>${c.harga}</td>
                     <td><a href="hapus/${c.id}"><button class="btn"> Hapus </button></a></td>
-                <tr>
+                </tr>
                 </c:forEach>
         </table>
         <a href="/E-Commerce/Product/all"><button class="btn btn-info ">Back To Product</button></a>
