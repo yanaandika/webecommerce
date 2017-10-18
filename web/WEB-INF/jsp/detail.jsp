@@ -26,6 +26,7 @@
                 </tr>
             </c:forEach>
         </table>
-        <a href="Product"><button class="btn">List Product</button></a>    
+        <a href="tambahkan"><button class="btn">Tambahkan Barang Belanjaan</button></a>   
+        
     </body>
 </html>

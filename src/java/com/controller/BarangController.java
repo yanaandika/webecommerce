@@ -26,10 +26,11 @@ public class BarangController {
     @Autowired
     Barang br;
     
+    List<Product> products = new ArrayList<>();
     @RequestMapping("/all")
-    public String showAllProduct(Model model){
+    public String showAllProduct(HttpSession session){
         List<Product> products = br.findAll();
-        model.addAttribute("prod", products);
+        session.setAttribute("prod", products);
         return "Product";
     }
     
@@ -38,9 +39,18 @@ public class BarangController {
         User user = new User("retere", "Lamakau");
         Product product = br.findById(customerId);
         user.getProducts().add(product);
+        session.setAttribute("prod", product);
         session.setAttribute("user", user);
         return "detail"; 
     }
     
     
+    @RequestMapping(value = "/tambahkan") // pake kurung kalo detail
+    public String detailProduk(Model model, HttpSession session) {
+        session.setAttribute("keranjang", products);
+        List<Product> list = (List<Product>) session.getAttribute("keranjang");
+        list.add((Product) session.getAttribute("prod"));
+        session.removeAttribute("prod");
+        return "berhasi";
+    }
 }
