@@ -18,7 +18,7 @@
         <table class="table table-hover">
             <thead class="thead-inverse">
             <h1>${user.username}</h1>
-            <p align="right"><a href="tambahkan">Barang</a> : ${user.products.size()}</p>
+            <p align="right"><a href="tambahkan">Barang</a> : ${keranjang.size()}</p>
             <tr>
                 <th>Nama</th> <th>Harga</th>
             </tr>
